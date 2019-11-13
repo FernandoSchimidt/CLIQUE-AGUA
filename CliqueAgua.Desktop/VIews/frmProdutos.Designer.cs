@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProdutos));
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -42,6 +43,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtEstoqueMinimo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtCodigo
@@ -158,11 +169,114 @@
             this.label5.TabIndex = 58;
             this.label5.Text = "Estoque minimo";
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(367, 407);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(38, 13);
+            this.label18.TabIndex = 95;
+            this.label18.Text = "Excluir";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(205, 407);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 13);
+            this.label17.TabIndex = 94;
+            this.label17.Text = "Pesquisar";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(675, 407);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 13);
+            this.label16.TabIndex = 93;
+            this.label16.Text = "Cancelar";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(524, 407);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(37, 13);
+            this.label15.TabIndex = 92;
+            this.label15.Text = "Salvar";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(59, 407);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(33, 13);
+            this.label14.TabIndex = 91;
+            this.label14.Text = "Novo";
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Image = global::CliqueAgua.Desktop.Properties.Resources.Novo;
+            this.btnNovo.Location = new System.Drawing.Point(35, 423);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(80, 80);
+            this.btnNovo.TabIndex = 90;
+            this.btnNovo.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Image = global::CliqueAgua.Desktop.Properties.Resources.Cancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(659, 423);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(80, 80);
+            this.btnCancelar.TabIndex = 88;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Image = global::CliqueAgua.Desktop.Properties.Resources.localizar_fw;
+            this.btnPesquisar.Location = new System.Drawing.Point(191, 423);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(80, 80);
+            this.btnPesquisar.TabIndex = 87;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Enabled = false;
+            this.btnExcluir.Image = global::CliqueAgua.Desktop.Properties.Resources.Excluir;
+            this.btnExcluir.Location = new System.Drawing.Point(347, 423);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(80, 80);
+            this.btnExcluir.TabIndex = 86;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Enabled = false;
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.Location = new System.Drawing.Point(503, 423);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(80, 80);
+            this.btnSalvar.TabIndex = 89;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            // 
             // frmProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 400);
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.btnNovo);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtEstoqueMinimo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtSaldo);
@@ -205,5 +319,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtEstoqueMinimo;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

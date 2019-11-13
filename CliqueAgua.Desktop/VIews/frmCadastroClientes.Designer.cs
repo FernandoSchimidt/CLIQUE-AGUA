@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroClientes));
             this.lblInvalido = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -56,17 +57,22 @@
             this.radioFisica = new System.Windows.Forms.RadioButton();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtConfirmaSenha = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblSenhas = new System.Windows.Forms.Label();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -315,43 +321,6 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Código";
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(664, 407);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 80);
-            this.button4.TabIndex = 71;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(456, 407);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(80, 80);
-            this.button3.TabIndex = 70;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(248, 407);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 80);
-            this.button2.TabIndex = 69;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Location = new System.Drawing.Point(40, 407);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(80, 80);
-            this.btnSalvar.TabIndex = 72;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
             // txtSenha
             // 
             this.txtSenha.Location = new System.Drawing.Point(41, 261);
@@ -388,19 +357,6 @@
             this.label7.TabIndex = 75;
             this.label7.Text = "Confirmar senha";
             // 
-            // lblSenhas
-            // 
-            this.lblSenhas.AutoSize = true;
-            this.lblSenhas.Enabled = false;
-            this.lblSenhas.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenhas.ForeColor = System.Drawing.Color.Red;
-            this.lblSenhas.Location = new System.Drawing.Point(374, 284);
-            this.lblSenhas.Name = "lblSenhas";
-            this.lblSenhas.Size = new System.Drawing.Size(141, 13);
-            this.lblSenhas.TabIndex = 77;
-            this.lblSenhas.Text = "As senhas não corresponde,";
-            this.lblSenhas.Visible = false;
-            // 
             // txtComplemento
             // 
             this.txtComplemento.Location = new System.Drawing.Point(533, 261);
@@ -417,21 +373,123 @@
             this.label9.TabIndex = 78;
             this.label9.Text = "Complemento";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(65, 391);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(33, 13);
+            this.label14.TabIndex = 81;
+            this.label14.Text = "Novo";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(530, 391);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(37, 13);
+            this.label15.TabIndex = 82;
+            this.label15.Text = "Salvar";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(681, 391);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 13);
+            this.label16.TabIndex = 83;
+            this.label16.Text = "Cancelar";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(211, 391);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 13);
+            this.label17.TabIndex = 84;
+            this.label17.Text = "Pesquisar";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(373, 391);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(38, 13);
+            this.label18.TabIndex = 85;
+            this.label18.Text = "Excluir";
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Image = global::CliqueAgua.Desktop.Properties.Resources.Novo;
+            this.btnNovo.Location = new System.Drawing.Point(41, 407);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(80, 80);
+            this.btnNovo.TabIndex = 80;
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Image = global::CliqueAgua.Desktop.Properties.Resources.Cancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(665, 407);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(80, 80);
+            this.btnCancelar.TabIndex = 71;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Image = global::CliqueAgua.Desktop.Properties.Resources.localizar_fw;
+            this.btnPesquisar.Location = new System.Drawing.Point(197, 407);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(80, 80);
+            this.btnPesquisar.TabIndex = 70;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Enabled = false;
+            this.btnExcluir.Image = global::CliqueAgua.Desktop.Properties.Resources.Excluir;
+            this.btnExcluir.Location = new System.Drawing.Point(353, 407);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(80, 80);
+            this.btnExcluir.TabIndex = 69;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Enabled = false;
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.Location = new System.Drawing.Point(509, 407);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(80, 80);
+            this.btnSalvar.TabIndex = 72;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // frmCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.txtComplemento);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.lblSenhas);
             this.Controls.Add(this.txtConfirmaSenha);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.lblInvalido);
             this.Controls.Add(this.txtEstado);
@@ -464,7 +522,7 @@
             this.MinimizeBox = false;
             this.Name = "frmCadastroClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmClientes";
+            this.Text = "cadastro de Clientes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -502,16 +560,21 @@
         private System.Windows.Forms.RadioButton radioFisica;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtConfirmaSenha;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblSenhas;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }

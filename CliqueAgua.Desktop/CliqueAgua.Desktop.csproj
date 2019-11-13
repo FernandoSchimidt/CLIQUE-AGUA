@@ -66,6 +66,12 @@
     <Compile Include="VIews\frmCadastroUsuario.Designer.cs">
       <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIews\frmConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIews\frmConsultaCliente.Designer.cs">
+      <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIews\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,12 +101,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="VIews\frmCadastroClientes.resx">
       <DependentUpon>frmCadastroClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIews\frmCadastroUsuario.resx">
       <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIews\frmConsultaCliente.resx">
+      <DependentUpon>frmConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIews\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -133,6 +143,36 @@
       <Project>{72fc730c-54ea-4386-ac42-4b7810d3604e}</Project>
       <Name>CliqueAgua.Util</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconesProjeto\Alterar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconesProjeto\Avançar1.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconesProjeto\Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconesProjeto\Excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconesProjeto\localizar.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconesProjeto\Novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconesProjeto\primeiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconesProjeto\Salvar1.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconesProjeto\Ultimo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconesProjeto\Voltar1.fw.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

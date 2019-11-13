@@ -23,7 +23,7 @@ namespace CliqueAgua.Desktop.VIews
         EnderecoController endCont = new EnderecoController();
         CidadeModel cidModel = new CidadeModel();
         CidadeController cidCont = new CidadeController();
-        
+
 
         public frmCadastroClientes()
         {
@@ -70,14 +70,14 @@ namespace CliqueAgua.Desktop.VIews
         {
             txtRazaoSocial.Enabled = false;
         }
-        public int  SalvarEndereco()
+        public int SalvarEndereco()
         {
-            
+
             //Cadastra a Cidade
             cidModel.Nome = txtCidade.Text;
             cidModel.Uf = txtEstado.Text;
             cidModel = cidCont.Gravar(cidModel);
-            
+
             //Cadastra o endereco
             endModel.IdCidade = cidModel.Id;
             endModel.Complemento = txtComplemento.Text;
@@ -92,74 +92,174 @@ namespace CliqueAgua.Desktop.VIews
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if(txtNome.Text != null)
+            if (!txtNome.Text.Trim().Equals(""))
             {
-                if(txtCpfCnpj.Text != null)
+                if (!txtCpfCnpj.Text.Trim().Equals(""))
                 {
-                    if(mskFone.Text != null)
+                    if (!mskFone.Text.Trim().Equals(""))
                     {
+                        if (!txtEmail.Text.Trim().Equals(""))
+                        {
+                            if (!txtSenha.Text.Trim().Equals(""))
+                            {
+                                if (!txtRgIe.Text.Trim().Equals(""))
+                                {
+                                    if (!txtEndereco.Text.Trim().Equals(""))
+                                    {
+                                        if (!txtNumero.Text.Trim().Equals(""))
+                                        {
+                                            if (!mskCep.Text.Trim().Equals(""))
+                                            {
+                                                if (!txtCidade.Text.Trim().Equals(""))
+                                                {
+                                                    if (!txtEstado.Text.Trim().Equals(""))
+                                                    {
 
+
+                                                        SalvarEndereco();
+                                                        try
+                                                        {
+                                                            //Cadastro de Cliente fisica
+                                                            if (radioFisica.Checked)
+                                                            {
+                                                                pessoaF.Nome = txtNome.Text;
+                                                                pessoaF.Telefone = mskFone.Text;
+                                                                pessoaF.Email = txtEmail.Text;
+                                                                pessoaF.Fisica = true;
+                                                                pessoaF.Cpf = txtCpfCnpj.Text;
+                                                                pessoaF.Rg = txtRgIe.Text;
+                                                                if(txtSenha.Text != txtConfirmaSenha.Text)
+                                                                {
+                                                                    MessageBox.Show("As senhas não correspondem");
+                                                                    txtSenha.Focus();
+                                                                    return;
+                                                                }
+                                                                else
+                                                                {
+                                                                    pessoaF.Senha = txtSenha.Text;
+                                                                                                                                        
+                                                                }
+                                                                pessoaF.IdEndereco = SalvarEndereco();
+
+                                                                pessoaFCon.Gravar(pessoaF);
+                                                                MessageBox.Show("Cliente cadastrado com sucesso!");
+                                                                Limpartela();
+                                                            }
+                                                            else
+                                                            {
+                                                                //Cadastro de Cliente juridica
+                                                                pessoaJ.Nome = txtNome.Text;
+                                                                pessoaJ.Telefone = mskFone.Text;
+                                                                pessoaJ.Email = txtEmail.Text;
+                                                                pessoaJ.Fisica = true;
+                                                                pessoaJ.Cnpj = txtCpfCnpj.Text;
+                                                                pessoaJ.InsEstadual = txtRgIe.Text;
+                                                                if (txtSenha.Text != txtConfirmaSenha.Text)
+                                                                {
+                                                                    MessageBox.Show("As senhas não correspondem");
+                                                                    txtSenha.Focus();
+                                                                    return;
+                                                                }
+                                                                else
+                                                                {
+                                                                    pessoaJ.Senha = txtSenha.Text;
+
+                                                                }
+                                                               
+                                                                pessoaJ.IdEndereco = SalvarEndereco();
+
+
+                                                                pessoaJCon.Gravar(pessoaJ);
+                                                                MessageBox.Show("Cliente cadastrado com sucesso!");
+                                                                Limpartela();
+
+                                                            }
+
+                                                        }
+                                                        catch (Exception ex)
+                                                        {
+                                                            MessageBox.Show("Erro ao cadastrar " + ex);
+                                                        }
+
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        MessageBox.Show("O campo estado não pode ser vazio.");
+                                                        txtEstado.Focus();
+                                                        return;
+
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    MessageBox.Show("O campo cidade não pode ser vazio.");
+                                                    txtCidade.Focus();
+                                                    return;
+                                                }
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("O campo CEP não pode ser vazio.");
+                                                mskCep.Focus();
+                                                return;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("O campo numero não pode ser vazio.");
+                                            txtNumero.Focus();
+                                            return;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("O campo endereço não pode ser vazio.");
+                                        txtEndereco.Focus();
+                                        return;
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("O campo RG/IE não pode ser vazio.");
+                                    txtRgIe.Focus();
+                                    return;
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("O campo senha não pode ser vazio.");
+                                txtSenha.Focus();
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("O campo email não pode ser vazio.");
+                            txtEmail.Focus();
+                            return;
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("O campo nome não pode ser vazio.");
+                        MessageBox.Show("O campo telefone não pode ser vazio.");
                         mskFone.Focus();
+                        return;
                     }
                 }
                 else
                 {
                     MessageBox.Show("O campo CPF/CNPJ não pode ser vazio.");
                     txtCpfCnpj.Focus();
+                    return;
                 }
             }
             else
             {
                 MessageBox.Show("O campo nome não pode ser vazio.");
                 txtNome.Focus();
-            }
-
-            SalvarEndereco();
-            try
-            {
-                //Cadastro de Cliente fisica
-                if (radioFisica.Checked)
-                {
-                    pessoaF.Nome = txtNome.Text;
-                    pessoaF.Telefone = mskFone.Text;
-                    pessoaF.Email = txtEmail.Text;
-                    pessoaF.Fisica = true;
-                    pessoaF.Cpf = txtCpfCnpj.Text;
-                    pessoaF.Rg = txtRgIe.Text;
-                    pessoaF.Senha = txtSenha.Text;
-                    pessoaF.IdEndereco = SalvarEndereco();
-                    
-                    pessoaFCon.Gravar(pessoaF);
-                    MessageBox.Show("Cliente cadastrado com sucesso!");
-                    Limpartela();
-                }
-                else
-                {
-                    //Cadastro de Cliente juridica
-                    pessoaJ.Nome = txtNome.Text;
-                    pessoaJ.Telefone = mskFone.Text;
-                    pessoaJ.Email = txtEmail.Text;
-                    pessoaJ.Fisica = true;
-                    pessoaJ.Cnpj = txtCpfCnpj.Text;
-                    pessoaJ.InsEstadual = txtRgIe.Text;
-                    pessoaJ.Senha = txtSenha.Text;
-                    pessoaJ.IdEndereco = SalvarEndereco();
-
-
-                    pessoaJCon.Gravar(pessoaJ);
-                    MessageBox.Show("Cliente cadastrado com sucesso!");
-                    Limpartela();
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao cadastrar " + ex);
+                return;
             }
 
 
@@ -167,7 +267,7 @@ namespace CliqueAgua.Desktop.VIews
 
         private void txtConfirmaSenha_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
         public void Limpartela()
         {
@@ -184,16 +284,36 @@ namespace CliqueAgua.Desktop.VIews
             txtRgIe.Clear();
             txtNumero.Clear();
             txtCidade.Clear();
+            txtEstado.Clear();
         }
 
         private void txtConfirmaSenha_Leave(object sender, EventArgs e)
         {
-            //Ativa o label se as senhas nao corresponderem
-            if (txtSenha.Text != txtConfirmaSenha.Text)
-            {
-                lblSenhas.Enabled = true;
-                txtSenha.Focus();
-            }
+         
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btnNovo.Enabled = false;
+            btnPesquisar.Enabled = false;
+            btnSalvar.Enabled = true;
+            btnCancelar.Enabled = true;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            btnNovo.Enabled = true;
+            btnCancelar.Enabled = false;
+            btnPesquisar.Enabled = true;
+            btnExcluir.Enabled = false;
+            btnSalvar.Enabled = false;
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            frmConsultaCliente f = new frmConsultaCliente();
+            f.ShowDialog();
+            f.Dispose();
         }
     }
 }

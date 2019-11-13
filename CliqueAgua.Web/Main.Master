@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="CliqueAgua.Web.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+        <link href="App_Themes/Style.css" rel="stylesheet" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="cphMenu" runat="server">
+                <div class="topo">
+                    <h1 class="t">..:: Clique Agua ::..</h1>
+                </div>
+                <div class="menutopo">
+                    <asp:Button ID="btnMinhaConta" OnClick="btnMinhaConta_Click" runat="server" Text="Minha Conta" CssClass="menutxt menutxtbtn" />
+                    <asp:Button ID="btnMeusPedidos" OnClick="btnMeusPedidos_Click" runat="server" Text="Meus Pedidos" CssClass="menutxt menutxtbtn" />
+                    <asp:Button ID="btnSair" OnClick="btnSair_Click" runat="server" Text="Sair" CssClass="menutxt menutxtbtn" />
+                </div>
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="corpo">
+            <asp:ContentPlaceHolder ID="cphBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <asp:ContentPlaceHolder ID="cphRodape" runat="server">
+            <div class="rodape">
+                <h5>Todos os direitos reservados a Clique Água</h5>
+            </div>
+        </asp:ContentPlaceHolder>
+
+    </form>
+</body>
+</html>

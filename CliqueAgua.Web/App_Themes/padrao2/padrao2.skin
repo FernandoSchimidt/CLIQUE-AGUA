@@ -1,0 +1,15 @@
+﻿<%--
+Modelo de capa padrão. As seguintes capas são fornecidas somente como exemplo.
+
+1. Capa de controle nomeada. O SkinId deve ser definido com exclusividade porque
+   SkinIds duplicados por tipo de controle não são permitidos no mesmo tema.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Capa padrão. O SkinId não foi definido. Somente uma capa 
+   de controle padrão por tipo de controle é permitida no mesmo tema.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>

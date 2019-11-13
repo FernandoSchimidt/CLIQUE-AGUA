@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB5C2527-21F5-45A8-A14A-BE43A59FD1A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CliqueAgua.Data</RootNamespace>
+    <AssemblyName>CliqueAgua.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CidadeController.cs" />
+    <Compile Include="Controllers\EnderecoController.cs" />
+    <Compile Include="Controllers\GrupoProdutoController.cs" />
+    <Compile Include="Controllers\PedidoCompraController.cs" />
+    <Compile Include="Controllers\PedidoCompraItemController.cs" />
+    <Compile Include="Controllers\PedidoVendaController.cs" />
+    <Compile Include="Controllers\PedidoVendaItemController.cs" />
+    <Compile Include="Controllers\PessoaJuridicaController.cs" />
+    <Compile Include="Controllers\PessoaVendedorController.cs" />
+    <Compile Include="Controllers\PessoaFisicaController.cs" />
+    <Compile Include="Controllers\PessoaController.cs" />
+    <Compile Include="Controllers\PessoaEnderecoController.cs" />
+    <Compile Include="Controllers\ProdutoController.cs" />
+    <Compile Include="Controllers\ProdutoMovimentacaoController.cs" />
+    <Compile Include="Dao\ControllerHelper.cs" />
+    <Compile Include="Dao\DbHelper.cs" />
+    <Compile Include="Ferramentas\buscarEndereco.cs" />
+    <Compile Include="Ferramentas\validacoes.cs" />
+    <Compile Include="Models\CidadeModel.cs" />
+    <Compile Include="Models\EnderecoModel.cs" />
+    <Compile Include="Models\GrupoProdutoModel.cs" />
+    <Compile Include="Models\PedidoCompraItemModel.cs" />
+    <Compile Include="Models\PedidoCompraModel.cs" />
+    <Compile Include="Models\PedidoVendaItemModel.cs" />
+    <Compile Include="Models\PedidoVendaModel.cs" />
+    <Compile Include="Models\PessoaEnderecoModel.cs" />
+    <Compile Include="Models\PessoaJuridicaModel.cs" />
+    <Compile Include="Models\PessoaFisicaModel.cs" />
+    <Compile Include="Models\PessoaVendedorModel.cs" />
+    <Compile Include="Models\PessoaModel.cs" />
+    <Compile Include="Models\ProdutoModel.cs" />
+    <Compile Include="Models\ProdutoMovimentacaoModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CLiqueAgua.Util\CliqueAgua.Util.csproj">
+      <Project>{72fc730c-54ea-4386-ac42-4b7810d3604e}</Project>
+      <Name>CliqueAgua.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

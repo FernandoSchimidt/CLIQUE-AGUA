@@ -1,0 +1,250 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: sans-serif;
+    background: #ffffff;
+}
+
+/* estrutura */
+
+.topo {
+    float: left;
+    width: 100%;
+    height: 50px;
+}
+
+.menutopo {
+    align-content: center;
+    text-align: center;
+    background-color: #34495e;
+}
+
+.corpo {
+    width: 100%;
+    min-height: 600px;
+    float: left;
+}
+
+.rodape {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    float: left;
+}
+
+.corpo2 {
+    width: 70%;
+    float: left;
+    align-content: center;
+    text-align: center;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.left {
+    width: 30%;
+    float: left;
+}
+
+.right {
+    width: 40%;
+    float: left;
+}
+
+.bottom {
+    width: 100%;
+    height: 100px;
+    float: left;
+}
+
+/* pedidos */
+
+.t4 {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* textos */
+
+.corpotitulo2 {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    font-size: 12px;
+}
+
+.corpotituloh2 {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    font-size: 30px;
+}
+
+.t {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.menutxtbtn {
+    width: 130px;
+    height: 30px;
+    border-width: 0px;
+    border-color: #fff;
+    border-style: solid;
+    align-content: center;
+    text-align: center;
+    background-color: #34495e;
+    color: #fff;
+}
+
+.menutxt {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 0px;
+}
+
+    .menutxt:hover {
+        color: #fff;
+        background-color: #2ecc71;
+        transition: 0.5s;
+        border-color: #2ecc71;
+    }
+
+.corpotitulo {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+}
+
+.rodape h5 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 8px 0px 8px 0px;
+    font-size: 11px;
+    background-color: #000;
+}
+/* meus pedidos, minha conta, pedido venda */
+
+.menu {
+    float: left;
+    display: block;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+}
+
+.corpo {
+    float: left;
+    display: block;
+    padding: 30px 20px 30px 20px;
+}
+
+.t11 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    background: #191919;
+    font-size: 25px;
+    padding: 0px 0px 0px 30px;
+}
+
+/* Botões e textbox */
+
+.campo1 {
+    border: 0;
+    background: none;
+    margin: 20px auto;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #000;
+    border-radius: 5px;
+    transition: 0.25s;
+    height: 8px;
+}
+
+    .campo1:focus {
+        width: 280px;
+        border-color: #2ecc71;
+    }
+
+.campo2 {
+    border: 0;
+    background: none;
+    margin: 20px auto;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #000;
+    border-radius: 5px;
+    transition: 0.25s;
+    height: 0px;
+}
+
+    .campo2:focus {
+        width: 280px;
+        border-color: #2ecc71;
+    }
+
+.campo3 {
+    border: 0;
+    background: none;
+    margin: 20px auto;
+    border: 2px solid #3498db;
+    padding: 6px 0px 6px 0px;
+    width: 200px;
+    outline: none;
+    color: #000;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+    .campo3:focus {
+        width: 280px;
+        border-color: #2ecc71;
+    }
+
+.btn1 {
+    border: 0;
+    background: none;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: #000;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+    .btn1:hover {
+        background: #2ecc71;
+        color: #fff;
+    }

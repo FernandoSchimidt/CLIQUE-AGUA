@@ -18,6 +18,7 @@ namespace CliqueAgua.Data.Dao
         public DbHelper()
         {
             _connectionString = @"Data Source=FERNANDOSCHIMID\SQLSERVER2014;Initial Catalog=ProjetoUnip;Persist Security Info=True;User ID=fernando;Password=172203";
+           //_connectionString = @"Data Source=localhost,11433;Initial Catalog=ProjetoUnip;Persist Security Info=True;User ID=sa;Password=sa@2000";
             //_connectionString = "Server=n2.mpsoftwares.com.br,3342;Database=ProjetoUnip;User Id=Unip;Password=unip@102030;";
             _providerName = "System.Data.SqlClient";
             _dbFactory = DbProviderFactories.GetFactory(_providerName);

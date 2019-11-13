@@ -1,6 +1,6 @@
 ﻿namespace CliqueAgua.Desktop.VIews
 {
-    partial class frmConsultaCliente
+    partial class frmConsultaFornecedor
     {
         /// <summary>
         /// Required designer variable.
@@ -45,18 +45,16 @@
             this.dgvDados.ReadOnly = true;
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(722, 442);
-            this.dgvDados.TabIndex = 9;
-            this.dgvDados.DoubleClick += new System.EventHandler(this.dgvDados_DoubleClick);
+            this.dgvDados.TabIndex = 17;
             // 
             // btnLocalizar
             // 
             this.btnLocalizar.Location = new System.Drawing.Point(635, 45);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(120, 34);
-            this.btnLocalizar.TabIndex = 8;
+            this.btnLocalizar.TabIndex = 16;
             this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.UseVisualStyleBackColor = true;
-            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // txtPesquisarPornome
             // 
@@ -64,8 +62,7 @@
             this.txtPesquisarPornome.Location = new System.Drawing.Point(33, 50);
             this.txtPesquisarPornome.Name = "txtPesquisarPornome";
             this.txtPesquisarPornome.Size = new System.Drawing.Size(564, 26);
-            this.txtPesquisarPornome.TabIndex = 7;
-            this.txtPesquisarPornome.TextChanged += new System.EventHandler(this.txtPesquisarPornome_TextChanged);
+            this.txtPesquisarPornome.TabIndex = 15;
             // 
             // label1
             // 
@@ -74,10 +71,10 @@
             this.label1.Location = new System.Drawing.Point(30, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 18);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 14;
             this.label1.Text = "Nome";
             // 
-            // frmConsultaCliente
+            // frmConsultaFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,10 +86,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmConsultaCliente";
+            this.Name = "frmConsultaFornecedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmConsultaCliente";
-            this.Load += new System.EventHandler(this.frmConsultaCliente_Load);
+            this.Text = "Consulta Fornecedor";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

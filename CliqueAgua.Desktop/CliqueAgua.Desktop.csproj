@@ -60,17 +60,41 @@
     <Compile Include="VIews\frmCadastroClientes.Designer.cs">
       <DependentUpon>frmCadastroClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIews\frmCadastroFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIews\frmCadastroFornecedor.Designer.cs">
+      <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIews\frmCadastroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VIews\frmCadastroUsuario.Designer.cs">
       <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIews\frmConsultaCadastroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIews\frmConsultaCadastroUsuario.Designer.cs">
+      <DependentUpon>frmConsultaCadastroUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIews\frmConsultaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VIews\frmConsultaCliente.Designer.cs">
       <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIews\frmConsultaFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIews\frmConsultaFornecedor.Designer.cs">
+      <DependentUpon>frmConsultaFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIews\frmConsultaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIews\frmConsultaProdutos.Designer.cs">
+      <DependentUpon>frmConsultaProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="VIews\frmLogin.cs">
       <SubType>Form</SubType>
@@ -84,11 +108,11 @@
     <Compile Include="VIews\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="VIews\frmProdutos.cs">
+    <Compile Include="VIews\frmCadastroProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VIews\frmProdutos.Designer.cs">
-      <DependentUpon>frmProdutos.cs</DependentUpon>
+    <Compile Include="VIews\frmCadastroProdutos.Designer.cs">
+      <DependentUpon>frmCadastroProdutos.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="VIews\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -106,11 +130,23 @@
     <EmbeddedResource Include="VIews\frmCadastroClientes.resx">
       <DependentUpon>frmCadastroClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VIews\frmCadastroFornecedor.resx">
+      <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIews\frmCadastroUsuario.resx">
       <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VIews\frmConsultaCadastroUsuario.resx">
+      <DependentUpon>frmConsultaCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIews\frmConsultaCliente.resx">
       <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIews\frmConsultaFornecedor.resx">
+      <DependentUpon>frmConsultaFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIews\frmConsultaProdutos.resx">
+      <DependentUpon>frmConsultaProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIews\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -118,8 +154,8 @@
     <EmbeddedResource Include="VIews\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VIews\frmProdutos.resx">
-      <DependentUpon>frmProdutos.cs</DependentUpon>
+    <EmbeddedResource Include="VIews\frmCadastroProdutos.resx">
+      <DependentUpon>frmCadastroProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

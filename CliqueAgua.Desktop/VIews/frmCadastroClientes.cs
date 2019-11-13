@@ -171,6 +171,7 @@ namespace CliqueAgua.Desktop.VIews
 
                                                                 pessoaJCon.Gravar(pessoaJ);
                                                                 MessageBox.Show("Cliente cadastrado com sucesso!");
+                                                                alteraBotoes(1);
                                                                 Limpartela();
 
                                                             }
@@ -294,26 +295,114 @@ namespace CliqueAgua.Desktop.VIews
 
         private void button1_Click(object sender, EventArgs e)
         {
-            btnNovo.Enabled = false;
-            btnPesquisar.Enabled = false;
-            btnSalvar.Enabled = true;
-            btnCancelar.Enabled = true;
+            alteraBotoes(2);
+            this.Limpartela();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            btnNovo.Enabled = true;
-            btnCancelar.Enabled = false;
-            btnPesquisar.Enabled = true;
-            btnExcluir.Enabled = false;
-            btnSalvar.Enabled = false;
+            alteraBotoes(1);
+            Limpartela();
         }
+
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+        
+
             frmConsultaCliente f = new frmConsultaCliente();
             f.ShowDialog();
+
+            txtCodigo.Text = f.pessoaModel.Id.ToString();
+            txtNome.Text = f.pessoaModel.Nome.ToString();
+            mskFone.Text = f.pessoaModel.Telefone.ToString();
+            txtEmail.Text = f.pessoaModel.Email.ToString();
+            if(f.pessoaModel.Fisica == true)
+            {
+                radioFisica.Checked = true;
+            }
+            else
+            {
+                radioJuridica.Checked = true;
+            }
+
+            // incluir rotina de preencher os campos
+
             f.Dispose();
+            
+            //apos ter puxado o dado
+            alteraBotoes(3);
+        }
+        public void alteraBotoes(int op)
+        {
+            //op = operações que serão feitas com os botoes
+            // 1 = preparar os botoes para inserir e localiza
+            // 2 = prepara os botoes para inserir/alterar um registro
+            // 3 = prepara a tela para excluir ou alterar
+
+            btnNovo.Enabled = false;
+            btnAlterar.Enabled = false;
+            btnPesquisar.Enabled = false;
+            btnAlterar.Enabled = false;
+            btnCancelar.Enabled = false;
+            btnSalvar.Enabled = false;
+
+            if (op.Equals(1))
+            {
+                btnNovo.Enabled = true;
+                btnPesquisar.Enabled = true;
+            }
+            if (op.Equals(2))
+            {
+                btnSalvar.Enabled = true;
+                btnCancelar.Enabled = true;
+                btnExcluir.Enabled = false;
+            }
+            if (op.Equals(3))
+            {
+                btnExcluir.Enabled = true;
+                btnAlterar.Enabled = true;
+                btnCancelar.Enabled = true;
+            }
+        }
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            alteraBotoes(2);
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            alteraBotoes(1);
+        }
+
+        private void frmCadastroClientes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

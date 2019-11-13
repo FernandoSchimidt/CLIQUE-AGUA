@@ -14,8 +14,9 @@ namespace CliqueAgua.Desktop.VIews
 {
     public partial class frmConsultaCliente : Form
     {
-        PessoaModel pessoaModel = new PessoaModel();
+        public PessoaModel pessoaModel = new PessoaModel();
         PessoaController pessoaCont = new PessoaController();
+
         public frmConsultaCliente()
         {
             InitializeComponent();
@@ -23,13 +24,36 @@ namespace CliqueAgua.Desktop.VIews
 
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
-            dgvDados.DataSource = pessoaCont.ConsultarPorEmail(pessoaModel);
-            
+            var controller = new PessoaController();
+            var model = new PessoaModel();
+            model.Nome = txtPesquisarPornome.Text;
+            dgvDados.DataSource = controller.ConsultarPorNome(model);
         }
 
         private void frmConsultaCliente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvDados_DoubleClick(object sender, EventArgs e)
+        {
+            
+                var linhasSelecionadas = dgvDados.SelectedRows;
+                if (linhasSelecionadas == null || linhasSelecionadas.Count == 0) return;
+                var idRegistro = Convert.ToInt32(linhasSelecionadas[0].Cells["Id"].Value);
+                var model = new PessoaModel();
+                model.Id = idRegistro;
+                pessoaModel = new PessoaController().Consultar(model);
+
+                this.Close();
+            
+          
+
+        }
+
+        private void txtPesquisarPornome_TextChanged(object sender, EventArgs e)
+        {
+            btnLocalizar_Click(sender, e);
         }
     }
 }

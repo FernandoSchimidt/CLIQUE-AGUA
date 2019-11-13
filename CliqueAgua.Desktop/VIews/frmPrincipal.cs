@@ -26,7 +26,7 @@ namespace CliqueAgua.Desktop.VIews
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Deseja realmente sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult r = MessageBox.Show("Deseja realmente sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (r.Equals(DialogResult.Yes))
             {
                 Application.Exit();
@@ -35,7 +35,7 @@ namespace CliqueAgua.Desktop.VIews
 
         private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmProdutos f = new frmProdutos();
+            frmCadastroProdutos f = new frmCadastroProdutos();
             f.ShowDialog();
             f.Dispose();
         }
@@ -46,6 +46,49 @@ namespace CliqueAgua.Desktop.VIews
             f.ShowDialog();
             f.Dispose();
 
+        }
+
+        private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastroFornecedor f = new frmCadastroFornecedor();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastroProdutos f = new frmCadastroProdutos();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultaCadastroUsuario f = new frmConsultaCadastroUsuario();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void cleintesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaCliente f = new frmConsultaCliente();
+            f.ShowDialog();
+            f.Dispose();
+
+        }
+
+        private void fornecedoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultaFornecedor f = new frmConsultaFornecedor();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void produtosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmConsultaProdutos f = new frmConsultaProdutos();
+            f.ShowDialog();
+            f.Dispose();
         }
     }
 }

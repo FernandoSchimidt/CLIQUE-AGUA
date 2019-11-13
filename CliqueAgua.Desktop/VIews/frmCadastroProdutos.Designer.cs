@@ -1,6 +1,6 @@
 ﻿namespace CliqueAgua.Desktop.VIews
 {
-    partial class frmProdutos
+    partial class frmCadastroProdutos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProdutos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroProdutos));
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -139,7 +139,7 @@
             // 
             // txtSaldo
             // 
-            this.txtSaldo.Location = new System.Drawing.Point(28, 250);
+            this.txtSaldo.Location = new System.Drawing.Point(398, 195);
             this.txtSaldo.Name = "txtSaldo";
             this.txtSaldo.Size = new System.Drawing.Size(115, 20);
             this.txtSaldo.TabIndex = 57;
@@ -147,7 +147,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 233);
+            this.label4.Location = new System.Drawing.Point(395, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 56;
@@ -155,7 +155,7 @@
             // 
             // txtEstoqueMinimo
             // 
-            this.txtEstoqueMinimo.Location = new System.Drawing.Point(28, 304);
+            this.txtEstoqueMinimo.Location = new System.Drawing.Point(28, 253);
             this.txtEstoqueMinimo.Name = "txtEstoqueMinimo";
             this.txtEstoqueMinimo.Size = new System.Drawing.Size(115, 20);
             this.txtEstoqueMinimo.TabIndex = 59;
@@ -163,7 +163,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 287);
+            this.label5.Location = new System.Drawing.Point(25, 236);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 13);
             this.label5.TabIndex = 58;
@@ -262,7 +262,7 @@
             this.btnSalvar.TabIndex = 89;
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
-            // frmProdutos
+            // frmCadastroProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -294,7 +294,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmProdutos";
+            this.Name = "frmCadastroProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProdutos";
             this.Load += new System.EventHandler(this.frmProdutos_Load);

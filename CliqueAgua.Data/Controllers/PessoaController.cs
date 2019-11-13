@@ -33,6 +33,11 @@ namespace CliqueAgua.Data.Controllers
         {
             return helper.Listar();
         }
+        public IEnumerable<PessoaModel> ConsultarPorNome(PessoaModel model)
+        {
+            var lstModel = helper.Listar($"nome like '%{model.Nome}%'", "nome", null);
+            return lstModel;
+        }
         public PessoaModel ConsultarPorEmail(PessoaModel model)
         {
             var lstModel = helper.Listar($"email = '{model.Email.ToLower()}'", "", 1);

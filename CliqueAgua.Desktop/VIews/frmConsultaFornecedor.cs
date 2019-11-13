@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CliqueAgua.Desktop.VIews
 {
-    public partial class frmProdutos : Form
+    public partial class frmConsultaFornecedor : Form
     {
-        public frmProdutos()
+        public frmConsultaFornecedor()
         {
             InitializeComponent();
-        }
-
-        private void frmProdutos_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

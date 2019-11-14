@@ -79,7 +79,7 @@ namespace CliqueAgua.Desktop.VIews
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            frmConsultaCadastroFornecedor f = new frmConsultaCadastroFornecedor();
+            frmConsultaFornecedor f = new frmConsultaFornecedor();
             f.ShowDialog();
             f.Dispose();
 

@@ -32,6 +32,21 @@ namespace CliqueAgua.Desktop.VIews
 
         private void frmConsultaCliente_Load(object sender, EventArgs e)
         {
+            btnLocalizar_Click(sender, e);
+            dgvDados.Columns[0].HeaderText = "Código";
+            dgvDados.Columns[0].Width = 50;
+            dgvDados.Columns[1].HeaderText = "Nome";
+            dgvDados.Columns[1].Width = 200;
+            dgvDados.Columns[2].HeaderText = "Fisica";
+            dgvDados.Columns[2].Width = 70;
+            dgvDados.Columns[3].HeaderText = "Telefone";
+            dgvDados.Columns[3].Width = 100;
+            dgvDados.Columns[4].HeaderText = "Email";
+            dgvDados.Columns[4].Width = 2000;
+            dgvDados.Columns[5].Visible = false;
+            dgvDados.Columns[5].Width = 150;
+            dgvDados.Columns[5].HeaderText = "Id do Endereço";
+            dgvDados.Columns[5].Width = 50;
 
         }
 

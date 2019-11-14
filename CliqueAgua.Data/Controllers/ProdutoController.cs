@@ -28,6 +28,11 @@ namespace CliqueAgua.Data.Controllers
         {
             return helper.Consultar(model.Id);
         }
+        public IEnumerable<ProdutoModel> ConsultarPorNome(ProdutoModel model)
+        {
+            var lstModel = helper.Listar($"nome like '%{model.Nome}%'", "nome", null);
+            return lstModel;
+        }
         public ProdutoModel ConsultarPorCodigo(ProdutoModel model)
         {
             var lstModel = helper.Listar($"codigo = '{model.Codigo}'", "", 1);

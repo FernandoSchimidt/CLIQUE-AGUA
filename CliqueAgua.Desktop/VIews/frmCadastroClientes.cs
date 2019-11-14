@@ -15,6 +15,8 @@ namespace CliqueAgua.Desktop.VIews
 {
     public partial class frmCadastroClientes : Form
     {
+        PessoaModel pessoaModel = new PessoaModel();
+        PessoaController pessoaController = new PessoaController();
         PessoaFisicaModel pessoaF = new PessoaFisicaModel();
         PessoaJuridicaModel pessoaJ = new PessoaJuridicaModel();
         PessoaFisicaController pessoaFCon = new PessoaFisicaController();
@@ -54,6 +56,7 @@ namespace CliqueAgua.Desktop.VIews
                 if (validacoes.IsCpf(txtCpfCnpj.Text).Equals(false))
                 {
                     lblInvalido.Visible = true;
+                    txtCpfCnpj.Focus();
                 }
             }
             else
@@ -144,6 +147,7 @@ namespace CliqueAgua.Desktop.VIews
                                                                 pessoaFCon.Gravar(pessoaF);
                                                                 MessageBox.Show("Cliente cadastrado com sucesso!");
                                                                 Limpartela();
+                                                                alteraBotoes(1);
                                                             }
                                                             else
                                                             {
@@ -296,7 +300,6 @@ namespace CliqueAgua.Desktop.VIews
         private void button1_Click(object sender, EventArgs e)
         {
             alteraBotoes(2);
-            this.Limpartela();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -312,21 +315,24 @@ namespace CliqueAgua.Desktop.VIews
 
             frmConsultaCliente f = new frmConsultaCliente();
             f.ShowDialog();
-
-            txtCodigo.Text = f.pessoaModel.Id.ToString();
-            txtNome.Text = f.pessoaModel.Nome.ToString();
-            mskFone.Text = f.pessoaModel.Telefone.ToString();
-            txtEmail.Text = f.pessoaModel.Email.ToString();
-            if(f.pessoaModel.Fisica == true)
+            if(f.pessoaModel.Id > 0)
             {
-                radioFisica.Checked = true;
-            }
-            else
-            {
-                radioJuridica.Checked = true;
+                txtCodigo.Text = f.pessoaModel.Id.ToString();
+                txtNome.Text = f.pessoaModel.Nome.ToString();
+                mskFone.Text = f.pessoaModel.Telefone.ToString();
+                txtEmail.Text = f.pessoaModel.Email.ToString();
+                if (f.pessoaModel.Fisica == true)
+                {
+                    radioFisica.Checked = true;
+                }
+                else
+                {
+                    radioJuridica.Checked = true;
+                }
+
+                // incluir rotina de preencher os campos
             }
 
-            // incluir rotina de preencher os campos
 
             f.Dispose();
             
@@ -351,6 +357,10 @@ namespace CliqueAgua.Desktop.VIews
             {
                 btnNovo.Enabled = true;
                 btnPesquisar.Enabled = true;
+                btnAlterar.Enabled = false;
+                btnExcluir.Enabled = false;
+                btnCancelar.Enabled = false;
+                btnSalvar.Enabled = false;
             }
             if (op.Equals(2))
             {
@@ -387,6 +397,7 @@ namespace CliqueAgua.Desktop.VIews
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+
             alteraBotoes(2);
         }
 
@@ -397,10 +408,35 @@ namespace CliqueAgua.Desktop.VIews
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            alteraBotoes(1);
+            if (!txtCodigo.Text.Equals(null))
+            {
+                try
+                {
+                    DialogResult d = MessageBox.Show("Deseja excluir o cadastro?", "Aviso", MessageBoxButtons.YesNo);
+                    if (d.ToString().Equals("Yes"))
+                    {
+                        pessoaModel.Id =Convert.ToInt32( txtCodigo.Text);
+                        pessoaController.Excluir(pessoaModel);
+                        MessageBox.Show("Cadastro excluido com sucesso!");
+                        this.Limpartela();
+                        this.alteraBotoes(1);
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Impossivel excluir o registro \n O registro esta sendo utilido em outro lugar");
+                    this.alteraBotoes(3);
+                }
+            }
+            
         }
 
         private void frmCadastroClientes_Load(object sender, EventArgs e)
+        {
+            radioFisica.Checked = true;
+        }
+
+        private void label19_Click(object sender, EventArgs e)
         {
 
         }

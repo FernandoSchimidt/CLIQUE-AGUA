@@ -73,9 +73,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(30, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.Size = new System.Drawing.Size(119, 18);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Nome";
+            this.label1.Text = "Nome do Cliente";
             // 
             // frmConsultaCliente
             // 
@@ -91,7 +91,7 @@
             this.MinimizeBox = false;
             this.Name = "frmConsultaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmConsultaCliente";
+            this.Text = "Consulta Cliente";
             this.Load += new System.EventHandler(this.frmConsultaCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);

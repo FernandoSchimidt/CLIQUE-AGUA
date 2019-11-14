@@ -66,6 +66,12 @@
     <Compile Include="VIews\frmCadastroFornecedor.Designer.cs">
       <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIews\frmCadastroGrupoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIews\frmCadastroGrupoProduto.Designer.cs">
+      <DependentUpon>frmCadastroGrupoProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIews\frmCadastroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

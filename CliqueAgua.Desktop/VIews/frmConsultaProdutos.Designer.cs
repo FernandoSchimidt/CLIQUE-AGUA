@@ -30,7 +30,7 @@
         {
             this.dgvDados = new System.Windows.Forms.DataGridView();
             this.btnLocalizar = new System.Windows.Forms.Button();
-            this.txtPesquisarPornome = new System.Windows.Forms.TextBox();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +46,7 @@
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(722, 442);
             this.dgvDados.TabIndex = 13;
+            this.dgvDados.DoubleClick += new System.EventHandler(this.dgvDados_DoubleClick);
             // 
             // btnLocalizar
             // 
@@ -55,14 +56,16 @@
             this.btnLocalizar.TabIndex = 12;
             this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.UseVisualStyleBackColor = true;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
-            // txtPesquisarPornome
+            // txtPesquisar
             // 
-            this.txtPesquisarPornome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisarPornome.Location = new System.Drawing.Point(33, 50);
-            this.txtPesquisarPornome.Name = "txtPesquisarPornome";
-            this.txtPesquisarPornome.Size = new System.Drawing.Size(564, 26);
-            this.txtPesquisarPornome.TabIndex = 11;
+            this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisar.Location = new System.Drawing.Point(33, 50);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(564, 26);
+            this.txtPesquisar.TabIndex = 11;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
             // label1
             // 
@@ -70,9 +73,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(30, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.Size = new System.Drawing.Size(125, 18);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Nome";
+            this.label1.Text = "Nome do produto";
             // 
             // frmConsultaProdutos
             // 
@@ -81,7 +84,7 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.dgvDados);
             this.Controls.Add(this.btnLocalizar);
-            this.Controls.Add(this.txtPesquisarPornome);
+            this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -89,6 +92,7 @@
             this.Name = "frmConsultaProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Produtos";
+            this.Load += new System.EventHandler(this.frmConsultaProdutos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -99,7 +103,7 @@
 
         private System.Windows.Forms.DataGridView dgvDados;
         private System.Windows.Forms.Button btnLocalizar;
-        private System.Windows.Forms.TextBox txtPesquisarPornome;
+        private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Label label1;
     }
 }

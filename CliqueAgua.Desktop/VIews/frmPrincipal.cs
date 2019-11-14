@@ -90,5 +90,12 @@ namespace CliqueAgua.Desktop.VIews
             f.ShowDialog();
             f.Dispose();
         }
+
+        private void grupoProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastroGrupoProduto f = new frmCadastroGrupoProduto();
+            f.ShowDialog();
+            f.Dispose();
+        }
     }
 }
